@@ -1,0 +1,2 @@
+gem 'ritual'
+require 'ritual'
