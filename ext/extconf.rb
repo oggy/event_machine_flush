@@ -16,5 +16,6 @@ require "#{event_machine_path}/ext/extconf.rb"
 alias create_makefile original_create_makefile
 
 # Create our makefile.
+$CPPFLAGS << " -Dprivate=public -Dprotected=public"
 $INCFLAGS << " -I#{event_machine_path}/ext"
 create_makefile "event_machine_flush_ext"

@@ -5,7 +5,8 @@ extern "C" {
   VALUE EventMachineFlush_flush(VALUE self, VALUE connection) {
     unsigned long signature = NUM2ULONG(rb_iv_get(connection, "@signature"));
     ConnectionDescriptor *ed = dynamic_cast<ConnectionDescriptor*>(Bindable_t::GetObject(signature));
-    ed->Write();
+    while (ed->OutboundPages.size() > 0)
+      ed->Write();
     return Qnil;
   }
 
