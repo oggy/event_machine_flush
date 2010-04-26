@@ -1,4 +1,4 @@
-== LATEST
+== 0.0.2 2010-04-26
 
  * Flush all pages, don't die if none.
  * Stop when no more data can be written.

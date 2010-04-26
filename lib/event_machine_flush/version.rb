@@ -1,5 +1,5 @@
 module EventMachineFlush
-  VERSION = [0, 0, 1]
+  VERSION = [0, 0, 2]
 
   class << VERSION
     include Comparable
