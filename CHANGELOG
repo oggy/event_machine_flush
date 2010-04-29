@@ -1,3 +1,7 @@
+== LATEST
+
+ * Build against latest installed eventmachine gem.
+
 == 0.0.2 2010-04-26
 
  * Flush all pages, don't die if none.

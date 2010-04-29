@@ -5,7 +5,7 @@ require 'rubygems'
 specs = Gem.source_index.find_name('eventmachine')
 specs.size > 0 or
   abort "can't find eventmachine gem"
-event_machine_path = specs.first.full_gem_path
+event_machine_path = specs.last.full_gem_path
 
 # Stub out create_makefile and load EventMachine's extconf.rb. This
 # ensures our build environment matches.
